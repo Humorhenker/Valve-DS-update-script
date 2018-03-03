@@ -48,6 +48,4 @@ else:
                 if appid == 730:
                         os.system("sudo " + csgo_steamcmdpath + " +login anonymous +force_install_dir " + csgopath + " +app_update 740 validate +quit")
                 elif appid == 4000:
-                        cmd = "sudo " + gmod_steamcmdpath + " +login anonymous +force_install_dir " + gmodpath + " +app_update 4020 validate +quit"
-                        print cmd
-                        os.system(cmd)
+                        os.system("sudo " + gmod_steamcmdpath + " +login anonymous +force_install_dir " + gmodpath + " +app_update 4020 validate +quit")
