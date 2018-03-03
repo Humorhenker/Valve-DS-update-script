@@ -3,8 +3,8 @@ from urllib2 import Request, urlopen, URLError
 from subprocess import call
 import os
 # insert your paths here
-csgopath = "somewehere/csgo"
-gmodpath = "somewhere/garrysmod"
+csgopath = "somewehere"
+gmodpath = "somewhere"
 csgo_steamcmdpath = "somewhere/steamcmd.sh"
 gmod_steamcmdpath = "somewhere/steamcmd.sh"
 
@@ -15,10 +15,10 @@ while not valid:
                 valid = True
 if antwort == 'csgo':
         appid = 730
-        file = open(csgopath + "/steam.inf","r")
+        file = open(csgopath + "/csgo/steam.inf","r")
 elif antwort == 'gmod':
         appid = 4000
-        file = open(gmodpath + "/steam.inf","r")
+        file = open(gmodpath + "/garrysmod/steam.inf","r")
 steaminf = file.read()
 front = steaminf.find('PatchVersion=')
 back = steaminf.find('\nProductName=')
